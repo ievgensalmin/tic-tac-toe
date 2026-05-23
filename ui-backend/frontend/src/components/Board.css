@@ -1,0 +1,49 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 10px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.cell {
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.cell.winning {
+  background-color: #4caf50;
+  border-color: #2e7d32;
+}
+
+.symbol {
+  animation: fadeIn 0.3s ease;
+}
+
+.symbol.x {
+  color: #2196f3;
+}
+
+.symbol.o {
+  color: #f44336;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

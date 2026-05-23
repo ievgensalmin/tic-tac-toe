@@ -1,0 +1,7 @@
+package com.tictactoe.common.exception;
+
+public class GameNotFoundException extends RuntimeException {
+    public GameNotFoundException(String gameId) {
+        super("Game not found: " + gameId);
+    }
+}
